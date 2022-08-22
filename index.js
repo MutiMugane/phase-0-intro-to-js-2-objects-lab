@@ -3,18 +3,20 @@ const employee = {
     streetAddress:"Nairobi"
 };
 
-function updateEmployeeWithKeyAndValue(object,key,value){
-    const copyOfEmployee = { ...employee };
 
-  copyOfEmployee[key] = value;
 
-  return copyOfEmployee;
-}
 const copyOfEmployee = updateEmployeeWithKeyAndValue(
     employee,
     "John",
     "123"
   );
+
+  function updateEmployeeWithKeyAndValue(object,key,value){
+    const copyOfEmployee = { ...employee };
+
+  copyOfEmployee[key] = value;
+
+  return copyOfEmployee;}
 
   function destructivelyUpdateEmployeeWithKeyAndValue(object, key, value){
     employee.name="Sam";
